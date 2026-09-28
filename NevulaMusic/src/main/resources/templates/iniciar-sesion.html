@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nébula Music - Iniciar Sesión</title>
+    <link rel="stylesheet" href="../static/styles/styles.css">
+</head>
+<body>
+
+<!-- MENÚ DE NAVEGACIÓN -->
+<nav>
+    <a class="logo" href="index.html">
+        <img src="../static/imgs/nebula-03.svg" alt="Logo Nébula" width="100">
+    </a>
+    <input type="checkbox" id="menu-triple">
+    <label for="menu-triple" class="menu-button">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="iniciar-sesion.html">Iniciar Sesión</a></li>
+        <li><a href="registro.html">Registrarse</a></li>
+    </ul>
+</nav>
+
+<!-- CONTENIDO PRINCIPAL -->
+<main class="auth-container">
+    <section class="auth-card">
+
+        <form method="post" action="/autentication" enctype="application/x-www-form-urlencoded">
+            <h1>Iniciar Sesión</h1>
+
+            <!-- Clase form-group para aplicar margen y estilos de label -->
+            <div class="form-group">
+                <label for="correo">Correo electrónico</label>
+                <input type="email"
+                       id="correo"
+                       name="correo"
+                       placeholder="correo@dominio.com"
+                       required
+                       minlength="5"
+                       maxlength="100">
+            </div>
+
+            <div class="form-group">
+                <label for="contrasenia">Contraseña</label>
+                <input type="password"
+                       id="contrasenia"
+                       name="contrasenia"
+                       placeholder="123Pin"
+                       required>
+            </div>
+
+            <!-- Botones con sus clases correspondientes -->
+            <button type="submit" class="btn-primary">
+                Iniciar Sesión
+            </button>
+
+            <button type="reset" class="btn-secondary">
+                Limpiar Formulario
+            </button>
+        </form>
+
+        <br>
+        <p>¿Aún no tienes cuenta? <a href="registro.html">Regístrate</a></p>
+
+    </section>
+</main>
+
+<!-- PIE DE PÁGINA -->
+<footer>
+    <p>Copyright Nébula 2025.</p>
+</footer>
+
+</body>
+</html>
